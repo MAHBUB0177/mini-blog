@@ -18,8 +18,8 @@ SECRET_KEY = 'django-insecure-#m+pu*gj3(nc8eqgzkzzidd23&tjmfllt7wi6=zoc$#ro#f)71
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CRISPY_TEMPLATE_PACK = 'bootstrap5.1'
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap5.1'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Application definition
 
@@ -33,6 +33,9 @@ INSTALLED_APPS = [
     'blog',
     'blogapi',
     'rest_framework',
+    'crispy_forms',
+    'website',
+    'customer',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +133,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]

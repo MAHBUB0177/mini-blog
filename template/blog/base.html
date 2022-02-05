@@ -1,94 +1,83 @@
-
-{% load static %}
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> {% block title %}  | Blog{% endblock %}
-  </title>
-  <!-- <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/web-icon.png' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} | Blog{% endblock %}
+    </title>
+    <!-- <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/web-icon.png' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" > -->
-  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
- 
-  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}"> -->
 
-  <style>
-    .one{
-      text-align: center;
-    }
-   
-  body{
-  background-color: rgb(75,74,74);
-  color: antiquewhite;
-}
-.jumbo-color{
-  background-color: rgb(83,81,81);
-  /* box-shadow: 5px 0px 5px ; */
-  border-radius: 5px solid;
-  margin-left: 100px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-}
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
-   
-  </style>
+    <!-- <style>
+        .one {
+            text-align: center;
+        }
+        
+        body {
+            background-color: rgb(75, 74, 74);
+            color: antiquewhite;
+        }
+        
+        .jumbo-color {
+            background-color: rgb(83, 81, 81);
+            /* box-shadow: 5px 0px 5px ; */
+            border-radius: 5px solid;
+            margin-left: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style> -->
 </head>
+
 <body>
- 
-  <div class="container-fluid bg-dark">
-    {% include "./navbar.html" %}
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      {% block message%}
 
-      {% endblock message%}
+    <div class="container-fluid bg-dark">
+        {% include "./navbar.html" %}
     </div>
-  </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block message%} {% endblock message%}
+            </div>
+        </div>
+    </div>
 
-<div class="row">
-  {% block side%}
-
-  {% endblock side%}
-
-
-  {% block body %}
-
-  {% endblock body %}
-
- 
-
-</div>
-
- 
- 
+    <div class="row">
+        {% block side%} {% endblock side%} {% block body %} {% endblock body %}
 
 
 
-<div class="wrapper">
+    </div>
 
-  
 
-</div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+    <div class="wrapper">
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
-<script src="{% static 'assets/js/bootstrap.js'%}"></script>
-<script src="{% static 'assets/js/popper.js'%}"></script>
-<script src="{% static 'assets/js/jquery.js'%}"></script>
-  {% block js %}
+    <!-- <script src="{% static 'assets/js/bootstrap.js'%}"></script>
+    <script src="{% static 'assets/js/popper.js'%}"></script>
+    <script src="{% static 'assets/js/jquery.js'%}"></script> -->
+    {% block js %} {% endblock js %}
 
-  {% endblock js %}
-  
 </body>
+
 </html>
